@@ -5,8 +5,9 @@ using CSVtoVCF.Utilities;
 Menu menu = new Menu();
 
 if(menu.Prompt() == "1") {
-    string path = menu.GetFilePath();
-
+    CSVHandler csv = new CSVHandler();
+    csv.FilePath = menu.GetFilePath();
+    csv.Handle();
 } else {
 
 }
